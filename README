@@ -1,0 +1,18 @@
+= Google Calendar Plugin For Redmine
+
+REQUIRES:  TZInfo GEM  (http://tzinfo.rubyforge.org/)
+
+A plugin to allow users to create a new Redmine tab and embed a Google Calendar using Google Embeddable Calendar iframe.
+
+http://www.google.com/calendar/embed/EmbedHelper_en.html
+
+To install from git: 
+
+(Git Version < 1.5.3)
+$ cd {RAILS_ROOT}/vendor/plugins 
+$ git clone git://github.com/mully/redmine_google_calendar.git
+
+(Git Version >= 1.5.3 -- Because the "git-rails" gem uses Git Submodules introduced in ver. 1.5.3)
+$ sudo gem install git-rails
+$ git-rails install git://github.com/mully/redmine_google_calendar.git
+
