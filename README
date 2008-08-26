@@ -2,8 +2,19 @@
 
 A plugin to allow users to create a new Redmine tab and embed content from an iframe
 
+== INSTALLATION == 
+
 To install from git: 
 
 $ cd {RAILS_ROOT}/vendor/plugins 
 $ git clone git://github.com/jamtur01/redmine_tab.git
+
+== INSTRUCTIONS ==
+
+1. This will allow you to create a tab that references a custom iframe.  You will need to go to
+'Admin -> Custom fields' and create a field of type 'Long text' for the iframe.  
+
+2. Inside your project you will need to add your iframe link as the value of this field.
+
+3. Then using the Modules tab select the relevant tab to add the new tab to your menu.
 
