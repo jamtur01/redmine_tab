@@ -22,7 +22,7 @@ class TabController < ApplicationController
   before_filter :find_project, :authorize
   
   def show
-    @iframe_text = IframeText.get_iframe_text(@project)
+    @tab_text = Tab.get_tab(@project)
   end
   
 
