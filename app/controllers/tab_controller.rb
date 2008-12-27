@@ -19,18 +19,9 @@
 
 class TabController < ApplicationController
   layout 'base'
-  before_filter :find_project, :authorize
   
   def show
-    @tab = Tab.get_tab(@project)
+    @tab = Tab.get_tab
   end
-  
 
-private
-  def find_project   
-    @project = Project.find(params[:id])
-  rescue ActiveRecord::RecordNotFound
-    render_404
-  end
-  
 end
