@@ -22,7 +22,7 @@ class TabController < ApplicationController
   before_filter :find_project, :authorize
   
   def show
-    @tab_text = Tab.get_tab(@project)
+    @tab = Tab.get_tab(@project)
   end
   
 
