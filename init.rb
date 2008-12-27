@@ -39,7 +39,7 @@ Redmine::Plugin.register :redmine_tab do
   end
 
   # A new item is added to the project menu
-  menu :project_menu, :tab, { :controller => 'tab', :action => 'show' }, :caption => Setting.redmine_tab['tab_name']
+  menu :project_menu, :tab, { :controller => 'tab', :action => 'show' } #, :caption => Setting.plugin_redmine_tab['tab_name']
 end
 
 Rails::Plugin.class_eval do
