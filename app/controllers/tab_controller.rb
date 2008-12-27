@@ -19,17 +19,10 @@
 
 class TabController < ApplicationController
   layout 'base'
-  before_filter :find_project, :authorize
+  before_filter :authorize
   
   def show
-    @tab_text = Tab.get_tab(@project)
-  end
-
-private
-  def find_project   
-    @project = Project.find(params[:id])
-  rescue ActiveRecord::RecordNotFound
-    render_404
+    @tab_text = Setting.plugin_redmine_tab['tab_text']
   end
 
 end

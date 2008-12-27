@@ -1,14 +1,7 @@
-<% string_fields = ProjectCustomField.find :all %>
-
-This will allow you to create a tab that references a custom iframe.  You will need to go to 'Admin -> Custom fields' and create the follow field of type 'Long text'.
-
-<ul>
-    <li>Tab Text</li>
-</ul>
-
-<p><label>Tab Text</label>
-<%= select_tag 'settings[tab_text]',
-               '<option value="">(Select one)</option>' +
-               options_from_collection_for_select(string_fields, :id, :name, @settings['tab_text'].to_i) %><br />
+<p><label>Tab Name</label>
+<%= text_field_tag 'settings[tab_name]', @settings['tab_name'] %><br />
 </p>
 
+<p><label>Tab Text</label>
+<%= text_area_tag 'settings[tab_text]', @settings['tab_text'], :cols => 80, :rows => 10 %><br />
+</p>
