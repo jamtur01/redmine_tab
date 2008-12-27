@@ -27,7 +27,6 @@ Redmine::Plugin.register :redmine_tab do
   
   settings :default => {
     'tab_text' => '',
-    'tab_name' => 'Tab'
   }, :partial => 'settings/settings'
 
   # This plugin adds a project module
