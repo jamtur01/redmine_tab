@@ -25,8 +25,10 @@ Redmine::Plugin.register :redmine_tab do
   description 'A plugin to allow users to add a new tab with a link to an iframe.'
   version '0.1.0'
   
-  settings :default => {'tab_text' => ''}, :partial => 'settings/settings'
-  settings :default => {'tab_name' => 'Tab'}, :partial => 'settings/settings'
+  settings :default => {
+    'tab_text' => '',
+    'tab_name' => 'Tab'
+  }, :partial => 'settings/settings'
 
   # This plugin adds a project module
   # It can be enabled/disabled at project level (Project settings -> Modules)
@@ -37,7 +39,7 @@ Redmine::Plugin.register :redmine_tab do
   end
 
   # A new item is added to the project menu
-  menu :project_menu, :tab, { :controller => 'tab', :action => 'show' }, :caption => Setting.plugin_redmine_tab['tab_name']
+  menu :project_menu, :tab, { :controller => 'tab', :action => 'show' }, :caption => Setting.redmine_tab['tab_name']
 end
 
 Rails::Plugin.class_eval do
