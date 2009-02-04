@@ -18,10 +18,14 @@
 #       MA 02110-1301, USA.
 
 class TabController < ApplicationController
+  unloadable
+
   layout 'base'
+ 
   before_filter :find_project, :authorize
-  
+
   def show
+    @project = Project.find(params[:project_id])
     @tab_text = Setting.plugin_redmine_tab['tab_text']
   end
 

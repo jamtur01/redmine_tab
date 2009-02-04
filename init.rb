@@ -39,7 +39,7 @@ Redmine::Plugin.register :redmine_tab do
   end
 
   # A new item is added to the project menu
-  menu :project_menu, :tab, { :controller => 'tab', :action => 'show' }, :caption => Proc.new { Setting.plugin_redmine_tab['tab_name'] }, :if => Proc.new { !Setting.plugin_redmine_tab['tab_name'].blank? }
+  menu :project_menu, :tab, { :controller => 'tab', :action => 'show' }, :caption => Proc.new { Setting.plugin_redmine_tab['tab_name'] }, :if => Proc.new { !Setting.plugin_redmine_tab['tab_name'].blank? }, :param => :project_id
 end
 
 Rails::Plugin.class_eval do
