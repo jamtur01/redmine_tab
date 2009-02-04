@@ -19,10 +19,16 @@
 
 class TabController < ApplicationController
   layout 'base'
-  before_filter :authorize
+  before_filter :find_project, :authorize
   
   def show
     @tab_text = Setting.plugin_redmine_tab['tab_text']
   end
 
+  private
+
+  def find_project
+     # @project variable must be set before calling the authorize filter
+     @project = Project.find(params[:project_id])
+  end
 end
