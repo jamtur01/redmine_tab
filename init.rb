@@ -1,5 +1,5 @@
-# redMine - project management software
-# Copyright (C) 2006-2007  Jean-Philippe Lang
+# Redmine - project management software
+# Copyright (C) 2006-2009  Jean-Philippe Lang
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -23,12 +23,13 @@ Redmine::Plugin.register :redmine_tab do
   name 'Tab Plugin'
   author 'James Turnbull'
   description 'A plugin to allow users to add a new tab with a link to an iframe.'
-  version '0.1.0'
+  version '0.2.0'
   
   settings :default => {
     'tab_text' => '',
     'tab_name' => 'Tab Name'
-  }, :partial => 'settings/settings'
+
+  }, :partial => 'settings/redminetab_settings'
 
   # This plugin adds a project module
   # It can be enabled/disabled at project level (Project settings -> Modules)
@@ -39,7 +40,7 @@ Redmine::Plugin.register :redmine_tab do
   end
 
   # A new item is added to the project menu
-  menu :project_menu, :tab, { :controller => 'tab', :action => 'show' }, :caption => Proc.new { Setting.plugin_redmine_tab['tab_name'] }, :if => Proc.new { !Setting.plugin_redmine_tab['tab_name'].blank? }, :param => :project_id
+  menu :project_menu, :tab, { :controller => 'tab', :action => 'show' }, :caption => Proc.new { Setting.plugin_redmine_tab['tab_name'] }, :if => Proc.new { !Setting.plugin_redmine_tab['tab_name'].blank? }
 end
 
 Rails::Plugin.class_eval do

@@ -1,0 +1,11 @@
+<% string_fields = ProjectCustomField.find :all %>
+
+<p><label>Tab Name</label>
+<%= text_field_tag 'settings[tab_name]', @settings['tab_name'] %><br />
+</p>
+
+<p><label>Tab Text</label>
+<%= select_tag 'settings[tab_text]',
+               '<option value="">(Select one)</option>' +
+               options_from_collection_for_select(string_fields, :id, :name, @settings['tab_text'].to_i) %><br />
+</p>

@@ -1,14 +1,24 @@
-= Tab Plugin For Redmine
+= Tab Plugin for Redmine
 
-A plugin to allow users to create a new Redmine tab and embed content from an iframe
+A plugin to allow users to create a new Redmine tab to embed content from an iframe on a per-project base.
+
+== CREDITS ==
+
+- Mischa the Evil for extensive updates and refactoring 
+- Eric Davis for identifying a number of issues and providing fixes
 
 == INSTALLATION == 
 
 To install from git: 
 
-$ cd {RAILS_ROOT}/vendor/plugins 
+$ cd {RAILS_ROOT}/vendor/plugins
 $ git clone git://github.com/jamtur01/redmine_tab.git
 
 == INSTRUCTIONS ==
 
-This creates a single tab in which you can embed an iframe.  You need to specify the Tab name and the iframe to embed in the Plugins -> Tab Plugin configuration options.
+This creates a single tab in which you can embed an iframe. You can globally configure the name of the tab in the Plugins -> Tab Plugin configuration options (default is "Tab Name"). The iframe-links can be configured on a per-project base using the value of a pre-configured project custom field.
+
+1. You need to go to 'Admin -> Custom fields -> Project' and create a field of the type 'Long text' to hold the iframe-link.
+2. Select the field you've created in the plugin configuration by selecting Plugins -> Tab Plugin and clicking Configure.
+3. Inside your project you will need to add your iframe-link as the value of the field you've selected. For example to embed Google: <iframe src="http://www.google.com/" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+4. Then use the project's Modules tab to enable the Tab module for the project.
