@@ -41,6 +41,17 @@ Redmine::Plugin.register :redmine_tab do
     permission :view_tab, {:tab => :show}
   end
 
+  # Translate or return the setting_name directly
+  string_or_translate = lambda {|setting_name|
+    string = Setting.plugin_redmine_tab[setting_name]
+    if !string.blank? && string.match(/\A:/) # uses symbol syntax, :string
+      string.gsub!(':','')
+      string = GLoc.l(string.to_sym) if Object.const_defined?('GLoc') # Rails 2.1.x
+      string = I18n.t(string.to_sym) if Object.const_defined?('I18n') # Rails 2.2.x
+    end
+    string
+  }
+  
   # A new item is added to the project menu
   menu :project_menu, :tab, { :controller => 'tab', :action => 'show' }, :caption => Proc.new { Setting.plugin_redmine_tab['tab_name'] }, :if => Proc.new { !Setting.plugin_redmine_tab['tab_name'].blank? }
 
@@ -48,16 +59,7 @@ Redmine::Plugin.register :redmine_tab do
   menu(:top_menu,
        :tab,
        { :controller => 'tab', :action => 'system_show' },
-       :caption => Proc.new {
-         # Translate or return the system tab name directly
-         string = Setting.plugin_redmine_tab['system_tab_name']
-         if !string.blank? && string.match(/\A:/) # uses symbol syntax, :string
-           string.gsub!(':','')
-           string = GLoc.l(string.to_sym) if Object.const_defined?('GLoc') # Rails 2.1.x
-           string = I18n.t(string.to_sym) if Object.const_defined?('I18n') # Rails 2.2.x
-         end
-         string
-       },
+       :caption => Proc.new { string_or_translate.call('system_tab_name') },
        :if => Proc.new { !Setting.plugin_redmine_tab['system_tab_name'].blank? })
 end
 
