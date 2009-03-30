@@ -1,5 +1,7 @@
 <% string_fields = ProjectCustomField.find :all %>
 
+<fieldset>
+<legend>Project Specific</legend>
 <p><label>Tab Name</label>
 <%= text_field_tag 'settings[tab_name]', @settings['tab_name'] %><br />
 </p>
@@ -9,3 +11,15 @@
                '<option value="">(Select one)</option>' +
                options_from_collection_for_select(string_fields, :id, :name, @settings['tab_text'].to_i) %><br />
 </p>
+</fieldset>
+
+<fieldset>
+<legend>Systemwide</legend>
+<p><label>Tab Name</label>
+<%= text_field_tag 'settings[system_tab_name]', @settings['system_tab_name'] %><br />
+</p>
+
+<p><label>Tab Text</label>
+<%= text_area_tag 'settings[system_tab_text]', @settings['system_tab_text'] %><br />
+</p>
+</fieldset>

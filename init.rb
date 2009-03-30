@@ -27,7 +27,9 @@ Redmine::Plugin.register :redmine_tab do
   
   settings :default => {
     'tab_text' => '',
-    'tab_name' => 'Tab Name'
+    'tab_name' => 'Tab Name',
+    'system_tab_text' => '',
+    'system_tab_name' => 'System Tab Name'
 
   }, :partial => 'settings/redminetab_settings'
 
@@ -41,6 +43,13 @@ Redmine::Plugin.register :redmine_tab do
 
   # A new item is added to the project menu
   menu :project_menu, :tab, { :controller => 'tab', :action => 'show' }, :caption => Proc.new { Setting.plugin_redmine_tab['tab_name'] }, :if => Proc.new { !Setting.plugin_redmine_tab['tab_name'].blank? }
+
+  
+  menu(:top_menu,
+       :tab,
+       { :controller => 'tab', :action => 'system_show' },
+       :caption => Proc.new { Setting.plugin_redmine_tab['system_tab_name'] },
+       :if => Proc.new { !Setting.plugin_redmine_tab['system_tab_name'].blank? })
 end
 
 Rails::Plugin.class_eval do
