@@ -23,7 +23,7 @@ Redmine::Plugin.register :redmine_tab do
   name 'Tab Plugin'
   author 'James Turnbull'
   description 'A plugin to allow users to add a new tab with a link to an iframe.'
-  version '0.2.0'
+  version '0.3.0'
   
   settings :default => {
     'tab_text' => '',

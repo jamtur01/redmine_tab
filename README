@@ -5,7 +5,7 @@ A plugin to allow users to create a new Redmine tab to embed content from an ifr
 == CREDITS ==
 
 - Mischa the Evil for extensive updates and refactoring 
-- Eric Davis for identifying a number of issues and providing fixes
+- Eric Davis for numerous fixes and new features
 
 == INSTALLATION == 
 
