@@ -1,6 +1,6 @@
 Tab is a Redmine plugin which adds a new Redmine tab to embed content from an iframe on a per-project base.
 
-# Copyright (C) 2008-2009,  James Turnbull, "Geek Herder" of the Squeejee Development Team (http://www.squeejee.com)
+# Copyright (C) 2008-2009,  James Turnbull, (http://www.james-turnbull.net)
 # Copyright (C) 2009,  Eric Davis, Little Stream Software (http://www.littlestreamsoftware.com)
 # Copyright (C) 2009,  Mischa The Evil, [[Evil-Dev]] (http://www.evil-dev.net)
 
