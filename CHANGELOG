@@ -1,6 +1,7 @@
 0.3.1 (2009-08-03)
     * Fixed Redmine trunk compatibility
     * Added Japanese i18n
+    * Added Dutch i18n
     * Improved documentation and licensing
 
 0.3.0 (2009-04-11)
