@@ -1,24 +1,91 @@
-= Tab Plugin for Redmine
+=Tab plugin
 
-A plugin to allow users to create a new Redmine tab to embed content from an iframe on a per-project base.
+A Redmine plugin which adds new Redmine tabs to embed content from an iframe on a per-project and system-wide base.
 
-== CREDITS ==
+==Author
 
-- Mischa the Evil for extensive updates and refactoring 
-- Eric Davis for numerous fixes and new features
+# James Turnbull
 
-== INSTALLATION == 
+==Latest release
 
-To install from git: 
+The currently available, latest release of the plugin is version <b>0.3.0</b>.
 
-$ cd {RAILS_ROOT}/vendor/plugins
-$ git clone git://github.com/jamtur01/redmine_tab.git
+==Changelog
 
-== INSTRUCTIONS ==
+For the complete changelog see the <tt>CHANGELOG<tt> file in the Tab plugin directory.
 
-This creates a single tab in which you can embed an iframe. You can globally configure the name of the tab in the Plugins -> Tab Plugin configuration options (default is "Tab Name"). The iframe-links can be configured on a per-project base using the value of a pre-configured project custom field.
+==Description
 
-1. You need to go to 'Admin -> Custom fields -> Project' and create a field of the type 'Long text' to hold the iframe-link.
-2. Select the field you've created in the plugin configuration by selecting Plugins -> Tab Plugin and clicking Configure.
-3. Inside your project you will need to add your iframe-link as the value of the field you've selected. For example to embed Google: <iframe src="http://www.google.com/" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-4. Then use the project's Modules tab to enable the Tab module for the project.
+The Tab plugin is a Redmine plugin which provides the ability to create a new Redmine tab, to embed content from an iframe, on a per-project base. This is done by storing the iframe-snippet in a project custom field.
+It also provides the ability to add a new, system-wide top menu tab. The iframe-source for that tab can be configured in the plugin settings.
+
+Besides these two features it also allows you to modify the actual tab and link names, without changing the source of the plugin, in the plugin settings.
+
+==Compatibility
+
+This plugin is compatible with Redmine 0.8.x only.
+
+==Obtaining 
+
+<i>URL of the GitHub repository: http://github.com/jamtur01/redmine_tab/tree/master</i>
+
+The source of this plugin can be "cloned" from the GitHub-repo using:
+
+<tt>$ cd {RAILS_ROOT}/vendor/plugins && git clone git://github.com/jamtur01/redmine_tab.git</tt>
+
+==Installation
+
+# Download the plugin from the available source (see http://www.redmine.org/wiki/redmine/PluginTab#Obtaining)
+# Install the plugin as described at: http://www.redmine.org/wiki/redmine/Plugins (this plugin does not require a plugin database migration)
+# Restart Redmine
+
+==Setup
+
+===Project-specific tabs
+
+This plugin creates a project-menu tab in which you can embed an iframe. You can globally configure the name of the tab in the Plugins -> Tab Plugin configuration options, under "Project Specific -> Tab Name" (default is "Tab Name").
+The iframe-sources for the individual projects can be configured on a per-project base using the value of a pre-configured project custom field (configured under "Project Specific -> Tab Text" (default is "none").
+
+- You need to go to 'Admin -> Custom fields -> Project' and create a field of the type 'Long text' to hold the iframe link.
+- Select the project custom field you've created in the plugin configuration, by going to Plugins -> Tab Plugin configuration options, under "Project Specific -> Tab Text".
+- Inside your project you will need to add your iframe-link as the value of the project custom field you've selected. For example to embed Google:
+  <tt><iframe src="http://www.google.com/" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe></tt>
+- Then use the project's Modules tab to enable the Tab module for the project; go to the preferred Redmine project -> "Project settings":
+## On the "Modules" tab: enable the plugin-module by checking "Tab".
+
+After that, the new project menu item will show up in the project menu.
+
+===System-wide tab (link)
+
+The plugin also provides the ability to add a new, system-wide top-menu tab (link). You can globally configure the name of the tab in the Plugins -> Tab Plugin configuration options, under "System wide -> Tab Name" (default is "System Tab Name").
+The iframe-source for the new top menu link can be globally configured using the value of the plugin setting "System wide -> Tab Text" (default is "none").
+
+==Upgrading
+
+# Backup the currently deployed Tab plugin (<tt>cp -r /vendor/plugins/redmine_tab /vendor/plugins/redmine_tab-backup</tt>)
+# Reinstall the updated plugin:
+** using the command: <tt>git pull</tt>
+# Restart your Redmine
+
+==Uninstalling
+
+# Remove the directory <i>"redmine_tab"</i> from the plugin-directory <i>"../vendor/plugins"</i>
+# Restart Redmine
+
+==Support
+
+If you would like to report a bug or request a new feature you can open a new issue at the issue-tracking section of the plugins' GitHub site: http://github.com/jamtur01/redmine_tab/issues.
+You can also post about the plugin in the dedicated plugin-section of the "Redmine forums":http://www.redmine.org/projects/redmine/boards/3.
+
+As an alternative you can also join the <tt>#redmine</tt> channel on the "freenode" (http://freenode.net/irc_servers.shtml) IRC network to see if there is anyone who can provide some support.
+
+==Licensing
+
+This plugin is open-source and licensed under the "GNU General Public License v2" (http://www.gnu.org/licenses/old-licenses/gpl-2.0.html) (GPL). See the included @COPYRIGHT.txt@ and @GPL.txt@ files for details.
+
+# (C) 2009, James Turnbull (http://www.james-turnbull.net)
+
+h2. Credits
+
+# Mischa the Evil for extensive updates and refactoring
+# Eric Davis for numerous fixes and new features
