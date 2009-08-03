@@ -17,7 +17,7 @@
 
 require 'redmine'
 
-RAILS_DEFAULT_LOGGER.info 'Tab'
+RAILS_DEFAULT_LOGGER.info 'Starting Tab plugin 0.3.0 for Redmine'
 
 Redmine::Plugin.register :redmine_tab do
   name 'Tab Plugin'
@@ -59,18 +59,10 @@ Redmine::Plugin.register :redmine_tab do
        :caption => Proc.new { string_or_translate.call('tab_name') },
        :if => Proc.new { !Setting.plugin_redmine_tab['tab_name'].blank? })
 
-  
+  # A new item is added to the top menu
   menu(:top_menu,
        :tab,
        { :controller => 'tab', :action => 'system_show' },
        :caption => Proc.new { string_or_translate.call('system_tab_name') },
        :if => Proc.new { !Setting.plugin_redmine_tab['system_tab_name'].blank? })
 end
-
-Rails::Plugin.class_eval do
-   def reloadable!
-     load_paths.each { |p| Dependencies.load_once_paths.delete(p) }
-   end
-end
-
-reloadable!
