@@ -4,7 +4,7 @@ A Redmine plugin which adds new Redmine tabs to embed content from an iframe on 
 
 ==Author
 
-# James Turnbull
+* James Turnbull
 
 ==Latest release
 
@@ -27,7 +27,7 @@ This plugin is compatible with Redmine 0.8.x as well as with the Redmine trunk.
 
 ==Obtaining 
 
-<i>URL of the GitHub repository: http://github.com/jamtur01/redmine_tab/tree/master</i>
+bq. URL of the GitHub repository: http://github.com/jamtur01/redmine_tab/tree/master
 
 The source of this plugin can be "cloned" from the GitHub-repo using:
 
@@ -35,9 +35,9 @@ The source of this plugin can be "cloned" from the GitHub-repo using:
 
 ==Installation
 
-# Download the plugin from the available source (see http://www.redmine.org/wiki/redmine/PluginTab#Obtaining)
-# Install the plugin as described at: http://www.redmine.org/wiki/redmine/Plugins (this plugin does not require a plugin database migration)
-# Restart Redmine
+* Download the plugin from the available source (see http://www.redmine.org/wiki/redmine/PluginTab#Obtaining)
+* Install the plugin as described at: http://www.redmine.org/wiki/redmine/Plugins (this plugin does not require a plugin database migration)
+* Restart Redmine
 
 ==Setup
 
@@ -51,7 +51,7 @@ The iframe-sources for the individual projects can be configured on a per-projec
 - Inside your project you will need to add your iframe-link as the value of the project custom field you've selected. For example to embed Google:
   <tt><iframe src="http://www.google.com/" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe></tt>
 - Then use the project's Modules tab to enable the Tab module for the project; go to the preferred Redmine project -> "Project settings":
-## On the "Modules" tab: enable the plugin-module by checking "Tab".
+  * On the "Modules" tab: enable the plugin-module by checking "Tab".
 
 After that, the new project menu item will show up in the project menu.
 
@@ -62,15 +62,15 @@ The iframe-source for the new top menu link can be globally configured using the
 
 ==Upgrading
 
-# Backup the currently deployed Tab plugin (<tt>cp -r /vendor/plugins/redmine_tab /vendor/plugins/redmine_tab-backup</tt>)
-# Reinstall the updated plugin:
+* Backup the currently deployed Tab plugin (<tt>cp -r /vendor/plugins/redmine_tab /vendor/plugins/redmine_tab-backup</tt>)
+* Reinstall the updated plugin:
 ** using the command: <tt>git pull</tt>
-# Restart your Redmine
+* Restart your Redmine
 
 ==Uninstalling
 
-# Remove the directory <i>"redmine_tab"</i> from the plugin-directory <i>"../vendor/plugins"</i>
-# Restart Redmine
+* Remove the directory <i>"redmine_tab"</i> from the plugin-directory <i>"../vendor/plugins"</i>
+* Restart Redmine
 
 ==Support
 
@@ -81,11 +81,11 @@ As an alternative you can also join the <tt>#redmine</tt> channel on the "freeno
 
 ==Credits
 
-# Mischa the Evil for extensive updates and refactoring
-# Eric Davis for numerous fixes and new features
+* Mischa the Evil for extensive updates and refactoring
+* Eric Davis for numerous fixes and new features
 
 ==Licensing
 
 This plugin is open-source and licensed under the "GNU General Public License v2" (http://www.gnu.org/licenses/old-licenses/gpl-2.0.html) (GPL). See the included @COPYRIGHT.txt@ and @GPL.txt@ files for details.
 
-# (C) 2009, James Turnbull (http://www.james-turnbull.net)
+* (C) 2009, James Turnbull (http://www.james-turnbull.net)
