@@ -17,13 +17,13 @@
 
 require 'redmine'
 
-RAILS_DEFAULT_LOGGER.info 'Starting Tab plugin 0.3.0 for Redmine'
+RAILS_DEFAULT_LOGGER.info 'Starting Tab plugin 0.3.1 for Redmine'
 
 Redmine::Plugin.register :redmine_tab do
   name 'Tab Plugin'
   author 'James Turnbull'
   description 'A plugin which adds Redmine tabs to embed content from an iframe on a per-project and system-wide base.'
-  version '0.3.0'
+  version '0.3.1'
   
   settings :default => {
     'tab_text' => '',

@@ -8,7 +8,7 @@ A Redmine plugin which adds new Redmine tabs to embed content from an iframe on 
 
 ==Latest release
 
-The currently available, latest release of the plugin is version <b>0.3.0</b>.
+The currently available, latest release of the plugin is version <b>0.3.1</b>.
 
 ==Changelog
 
@@ -23,7 +23,7 @@ Besides these two features it also allows you to modify the actual tab and link 
 
 ==Compatibility
 
-This plugin is compatible with Redmine 0.8.x only.
+This plugin is compatible with Redmine 0.8.x as well as with the Redmine trunk.
 
 ==Obtaining 
 
@@ -31,7 +31,7 @@ This plugin is compatible with Redmine 0.8.x only.
 
 The source of this plugin can be "cloned" from the GitHub-repo using:
 
-<tt>$ cd {RAILS_ROOT}/vendor/plugins && git clone git://github.com/jamtur01/redmine_tab.git</tt>
+<tt>$ cd {REDMINE_ROOT}/vendor/plugins && git clone git://github.com/jamtur01/redmine_tab.git</tt>
 
 ==Installation
 
@@ -79,13 +79,13 @@ You can also post about the plugin in the dedicated plugin-section of the "Redmi
 
 As an alternative you can also join the <tt>#redmine</tt> channel on the "freenode" (http://freenode.net/irc_servers.shtml) IRC network to see if there is anyone who can provide some support.
 
+==Credits
+
+# Mischa the Evil for extensive updates and refactoring
+# Eric Davis for numerous fixes and new features
+
 ==Licensing
 
 This plugin is open-source and licensed under the "GNU General Public License v2" (http://www.gnu.org/licenses/old-licenses/gpl-2.0.html) (GPL). See the included @COPYRIGHT.txt@ and @GPL.txt@ files for details.
 
 # (C) 2009, James Turnbull (http://www.james-turnbull.net)
-
-h2. Credits
-
-# Mischa the Evil for extensive updates and refactoring
-# Eric Davis for numerous fixes and new features
