@@ -1,4 +1,4 @@
-Tab is a Redmine plugin which adds a new Redmine tab to embed content from an iframe on a per-project base.
+Tab is a Redmine plugin which adds new tabs to embed content from an iframe on a per-project and system-wide base.
 
 # Copyright (C) 2008-2009,  James Turnbull, (http://www.james-turnbull.net)
 # Copyright (C) 2009,  Eric Davis, Little Stream Software (http://www.littlestreamsoftware.com)

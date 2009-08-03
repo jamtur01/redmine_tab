@@ -22,7 +22,7 @@ RAILS_DEFAULT_LOGGER.info 'Starting Tab plugin 0.3.0 for Redmine'
 Redmine::Plugin.register :redmine_tab do
   name 'Tab Plugin'
   author 'James Turnbull'
-  description 'A plugin to allow users to add a new tab with a link to an iframe.'
+  description 'A plugin which adds Redmine tabs to embed content from an iframe on a per-project and system-wide base.'
   version '0.3.0'
   
   settings :default => {
