@@ -49,7 +49,7 @@ The iframe-sources for the individual projects can be configured on a per-projec
 1. You need to go to 'Admin -> Custom fields -> Project' and create a field of the type 'Long text' to hold the iframe link.
 2. Select the project custom field you've created in the plugin configuration, by going to Plugins -> Tab Plugin configuration options, under "Project Specific -> Tab Text".
 3. Inside your project you will need to add your iframe-link as the value of the project custom field you've selected. For example to embed Google:
-   <iframe src="http://www.google.com/" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+     <iframe src="http://www.google.com/" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 4. Then use the project's Modules tab to enable the Tab module for the project; go to the preferred Redmine project -> "Project settings":
    * On the "Modules" tab: enable the plugin-module by checking "Tab".
 
