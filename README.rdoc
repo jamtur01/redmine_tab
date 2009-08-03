@@ -12,7 +12,7 @@ The currently available, latest release of the plugin is version <b>0.3.1</b>.
 
 ==Changelog
 
-For the complete changelog see the <tt>CHANGELOG<tt> file in the Tab plugin directory.
+For the complete changelog see the <tt>CHANGELOG</tt> file in the Tab plugin directory.
 
 ==Description
 
@@ -27,7 +27,7 @@ This plugin is compatible with Redmine 0.8.x as well as with the Redmine trunk.
 
 ==Obtaining 
 
-bq. URL of the GitHub repository: http://github.com/jamtur01/redmine_tab/tree/master
+<i>URL of the GitHub repository: http://github.com/jamtur01/redmine_tab/tree/master</i>
 
 The source of this plugin can be "cloned" from the GitHub-repo using:
 
@@ -64,7 +64,7 @@ The iframe-source for the new top menu link can be globally configured using the
 
 * Backup the currently deployed Tab plugin (<tt>cp -r /vendor/plugins/redmine_tab /vendor/plugins/redmine_tab-backup</tt>)
 * Reinstall the updated plugin:
-** using the command: <tt>git pull</tt>
+  * using the command: <tt>git pull</tt>
 * Restart your Redmine
 
 ==Uninstalling
@@ -75,7 +75,7 @@ The iframe-source for the new top menu link can be globally configured using the
 ==Support
 
 If you would like to report a bug or request a new feature you can open a new issue at the issue-tracking section of the plugins' GitHub site: http://github.com/jamtur01/redmine_tab/issues.
-You can also post about the plugin in the dedicated plugin-section of the "Redmine forums":http://www.redmine.org/projects/redmine/boards/3.
+You can also post about the plugin in the dedicated plugin-section of the "Redmine forums" (http://www.redmine.org/projects/redmine/boards/3).
 
 As an alternative you can also join the <tt>#redmine</tt> channel on the "freenode" (http://freenode.net/irc_servers.shtml) IRC network to see if there is anyone who can provide some support.
 
@@ -86,6 +86,6 @@ As an alternative you can also join the <tt>#redmine</tt> channel on the "freeno
 
 ==Licensing
 
-This plugin is open-source and licensed under the "GNU General Public License v2" (http://www.gnu.org/licenses/old-licenses/gpl-2.0.html) (GPL). See the included @COPYRIGHT.txt@ and @GPL.txt@ files for details.
+This plugin is open-source and licensed under the "GNU General Public License v2" (http://www.gnu.org/licenses/old-licenses/gpl-2.0.html) (GPL). See the included <tt>COPYRIGHT.txt</tt> and <tt>GPL.txt</tt> files for details.
 
 * (C) 2009, James Turnbull (http://www.james-turnbull.net)
