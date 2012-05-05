@@ -8,7 +8,7 @@ A Redmine plugin which adds new Redmine tabs to embed content from an iframe on 
 
 ==Latest release
 
-The currently available, latest release of the plugin is version <b>0.3.1</b>.
+The currently available, latest release of the plugin is version <b>0.4.0</b>.
 
 ==Changelog
 
