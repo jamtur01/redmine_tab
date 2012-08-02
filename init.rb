@@ -17,7 +17,7 @@
 
 require 'redmine'
 
-RAILS_DEFAULT_LOGGER.info 'Starting Tab plugin for Redmine'
+Rails.logger.info 'Starting Tab plugin for Redmine'
 
 Redmine::Plugin.register :redmine_tab do
   name 'Tab Plugin'
