@@ -1,4 +1,4 @@
-<% string_fields = ProjectCustomField.find :all %>
+<% string_fields = ProjectCustomField.all %>
 <% select_options = '<option value="">(Select one)</option>' << options_from_collection_for_select(string_fields, :id, :name, @settings['tab_text'].to_i) %>
 
 <fieldset>
