@@ -1,0 +1,7 @@
+fr:
+  project_module_tab: "Onglet personnalisable"
+  tab_text_project_specific: "Spécifique au projet"
+  tab_text_systemwide: "Commun à tous les projets"
+  tab_label_tab_name: "Nom de l'onglet"
+  tab_label_tab_text: "Texte de l'onglet"
+
